@@ -16,18 +16,21 @@
 
     <div class="wrapper">
         <div class="form-header">
-            <div class="titels">
+            <div class="titles">
                 <div class="title-login">Login</div>
+                <div class="title-register">Register</div>
             </div>
         </div>
+
+        <!-- FORM LOGIN -->
         <form action="#" class="login-form" autocomplete="off">
             <div class="input-box">
-                <input type="text" class="input-field" id="log-email">
+                <input type="text" class="input-field" id="log-email" required>
                 <label for="log-email" class="label">Email</label>
                 <i class='bx bx-envelope icon'></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" id="log-pass">
+                <input type="password" class="input-field" id="log-pass" required>
                 <label for="log-pass" class="label">Password</label>
                 <i class='bx bx-lock-alt icon'></i>
             </div>
@@ -41,12 +44,40 @@
                 <button class="btn-submit" id="SignInBtn">Sign In <i class='bx bx-log-in'></i></button>
             </div>
             <div class="switch-form">
-                <span>Don't have an account? <a href="#">Register</a></span>
+                <span>Don't have an account? <a href="#" onclick="registerFunction()">Register</a></span>
             </div>
-    </div>
-    </div>
-    </form>
+        </form> <!-- Закрываю форму логина -->
 
+        <!-- FORM REGISTER -->
+        <form action="#" class="register-form" autocomplete="off">
+            <div class="input-box">
+                <input type="text" class="input-field" id="reg-name" required>
+                <label for="reg-name" class="label">Username</label>
+                <i class='bx bx-user icon'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" id="reg-email" required>
+                <label for="reg-email" class="label">Email</label>
+                <i class='bx bx-envelope icon'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="reg-pass" required>
+                <label for="reg-pass" class="label">Password</label>
+                <i class='bx bx-lock-alt icon'></i>
+            </div>
+            <div class="form-cols">
+                <div class="col-1">
+                    <input type="checkbox" id="agree">
+                    <label for="agree"> I agree to terms & conditions </label>
+                </div>
+            </div>
+            <div class="input-box">
+                <button class="btn-submit" id="SignUpBtn">Sign Up <i class='bx bx-log-out'></i></button>
+            </div>
+            <div class="switch-form">
+                <span>Already have an account? <a href="#" onclick="loginFunction()">Login</a></span>
+            </div>
+        </form> <!-- Закрываю форму регистрации -->
     </div>
 
     <script src="js/script.js"></script>
